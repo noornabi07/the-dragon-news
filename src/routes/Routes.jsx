@@ -4,16 +4,15 @@ import Login from "../components/Login/Login";
 import Category from "../components/Category/Category";
 import News from "../components/News/News";
 import NewsPage from "../components/News/NewsPage/NewsPage";
+import About from "../components/About/About";
+import Career from "../components/Career/Career";
+import Register from "../components/Register/Register";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Home></Home>,
         children: [
-            {
-                path: 'login',
-                element: <Login></Login>
-            },
             {
                 path: '/',
                 element: <Category></Category>,
@@ -25,6 +24,22 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
             }
         ]
+    },
+    {
+        path: 'login',
+        element: <Login></Login>
+    },
+    {
+        path: '/about',
+        element: <About></About>
+    },
+    {
+        path: '/career',
+        element: <Career></Career>
+    },
+    {
+        path: '/register',
+        element: <Register></Register>
     },
     {
         path: 'news',
