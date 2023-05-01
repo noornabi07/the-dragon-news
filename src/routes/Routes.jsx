@@ -7,6 +7,8 @@ import NewsPage from "../components/News/NewsPage/NewsPage";
 import About from "../components/About/About";
 import Career from "../components/Career/Career";
 import Register from "../components/Register/Register";
+import PrivetRoute from "./PrivetRoute";
+import Terms from "../components/Terms/Terms";
 
 const router = createBrowserRouter([
     {
@@ -42,8 +44,12 @@ const router = createBrowserRouter([
         element: <Register></Register>
     },
     {
+        path: '/terms',
+        element: <Terms></Terms>
+    },
+    {
         path: 'news',
-        element: <News></News>,
+        element: <PrivetRoute><News></News></PrivetRoute>,
         children: [
             {
                 path: ':id',
