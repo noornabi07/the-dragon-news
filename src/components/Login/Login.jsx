@@ -3,8 +3,10 @@ import NavigationBar from '../Shared/NavigationBar/NavigationBar';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login')
 
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();

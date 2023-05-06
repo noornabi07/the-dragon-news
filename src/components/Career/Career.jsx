@@ -1,7 +1,9 @@
 import React from 'react';
 import NavigationBar from '../Shared/NavigationBar/NavigationBar';
+import useTitle from '../../Hooks/useTitle';
 
 const Career = () => {
+    useTitle('Career')
     return (
         <div>
             <NavigationBar></NavigationBar>
