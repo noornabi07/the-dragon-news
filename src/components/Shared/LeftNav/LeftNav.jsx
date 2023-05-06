@@ -5,7 +5,7 @@ import SideNews from './SideNews/SideNews';
 const LeftNav = () => {
     const [categories, setCategories] = useState([])
     useEffect( ()=>{
-        fetch('http://localhost:5000/categories')
+        fetch('https://the-dragon-news-server-noornabi07.vercel.app/categories')
         .then(res => res.json())
         .then(data => setCategories(data))
         .catch(error => console.error(error))
